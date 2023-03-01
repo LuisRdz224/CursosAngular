@@ -10,6 +10,13 @@ export class EmpleadoComponent {
   nombre = 'Luis';
   apellido = 'Rodriguez';
   edad = 18;
+  habilitarBtn = false;
+
+  usuarioRegistrado = false;
+
+  getUsuarioRegistrado() {
+    this.usuarioRegistrado = true;
+  }
 
   llamaEmpresa(value: String) {}
 
