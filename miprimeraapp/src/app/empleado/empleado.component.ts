@@ -11,6 +11,7 @@ export class EmpleadoComponent {
   apellido = 'Rodriguez';
   edad = 18;
   habilitarBtn = false;
+  empresa = 'Google ';
 
   usuarioRegistrado = false;
   textoRegistro = 'No hay nadie registrado';
@@ -23,8 +24,10 @@ export class EmpleadoComponent {
     // alert('El usuario se acaba de registrar');
     if ((<HTMLInputElement>event.target).value == 'si') {
       this.textoRegistro = 'El usuario se acaba de registrar';
+      this.habilitarBtn = true;
     } else {
       this.textoRegistro = 'No hay nadie registrado';
+      this.habilitarBtn = false;
     }
   }
 

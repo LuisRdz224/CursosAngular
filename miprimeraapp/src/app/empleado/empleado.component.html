@@ -1,10 +1,15 @@
-<p>Empleado: {{nombre.value}} {{apellido}}</p>
+<p>Empleado: {{nombre}} {{apellido}}</p>
 <p>Edad: {{edad<18?'Es menor de edad':edad}} </p>
-<!-- <p>Empresa donde trabaja: {{empresa.value}} </p> -->
+<p>Empresa donde trabaja: {{empresa}} </p>
 
-<label>Introduce el nombre: </label><input type="text" #nombre (keyup)="0" [disabled]="habilitarBtn"><br>
+<!-- <label>Introduce el nombre: </label><input type="text" #nombre (keyup)="0" [disabled]="habilitarBtn"><br> -->
 <!-- <input type="button" value="Enviar datos" (click)="llamaEmpresa(empresa.value)"> -->
-{{textoRegistro}} <br>
+
+<label>Introduce el nombre: </label><input type="text" [(ngModel)] = 'empresa'>
+
+<br> {{textoRegistro}} <br>
+
+
 Registrado <input type="radio" value="si" name="nRegistro" id="registro" [checked]="usuarioRegistrado" (click)="setUsuarioRegistrado($event)">
 No registrado <input type="radio" value="no" name="nRegistro" (click)="setUsuarioRegistrado($event)">
 
