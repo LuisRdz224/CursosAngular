@@ -13,9 +13,19 @@ export class EmpleadoComponent {
   habilitarBtn = false;
 
   usuarioRegistrado = false;
+  textoRegistro = 'No hay nadie registrado';
 
   getUsuarioRegistrado() {
-    this.usuarioRegistrado = true;
+    this.usuarioRegistrado = false;
+  }
+
+  setUsuarioRegistrado(event: Event) {
+    // alert('El usuario se acaba de registrar');
+    if ((<HTMLInputElement>event.target).value == 'si') {
+      this.textoRegistro = 'El usuario se acaba de registrar';
+    } else {
+      this.textoRegistro = 'No hay nadie registrado';
+    }
   }
 
   llamaEmpresa(value: String) {}
