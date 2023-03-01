@@ -1,1 +1,6 @@
-<p>empleado works!</p>
+<p>Empleado: {{nombre.value}} {{apellido}}</p>
+<p>Edad: {{edad<18?'Es menor de edad':edad}} </p>
+<!-- <p>Empresa donde trabaja: {{empresa.value}} </p> -->
+
+<label>Introduce el nombre: </label><input type="text" #nombre (keyup)="0"><br>
+<!-- <input type="button" value="Enviar datos" (click)="llamaEmpresa(empresa.value)"> -->
