@@ -1,12 +1,11 @@
-<form>
+<form #myForm="ngForm">
   <div class="form-group">
       <label>Ingresa el operando A</label>
-      <input type="number" class="form-control" placeholder="Ingresa numero">
+      <input type="number" class="form-control" name="opA" placeholder="Ingresa numero" [(ngModel)]='opA'>
   </div>
   <div class="form-group">
     <p>Ingresa el operando B</p>
-    <input type="number" class="form-control" placeholder="Ingresa numero">
+    <input type="number" class="form-control" name="opB" placeholder="Ingresa numero" [(ngModel)]='opB'>
   </div>
-  <button class="btn btn-primary" type="submit" (click)="sumar()">Sumar</button>
-  <p>Resultado: {{resultado}} </p>
 </form>
+<button class="btn btn-primary" type="submit" (click)="suma()">Sumar</button>

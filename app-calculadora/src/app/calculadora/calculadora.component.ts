@@ -1,18 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-calculadora',
   templateUrl: './calculadora.component.html',
-  styleUrls: ['./calculadora.component.css']
+  styleUrls: ['./calculadora.component.css'],
 })
-export class CalculadoraComponent{
+export class CalculadoraComponent {
+  opA: number;
+  opB: number;
 
-  opA: number = 0;
-  opB: number = 0;
-  resultado: number = 0;
+  @Output() resultadoSuma = new EventEmitter<number>();
 
-  sumar():void{
-    this.resultado = this.opA + this.opB
+  suma(): void {
+    let resultado = this.opA + this.opB;
+    this.resultadoSuma.emit(resultado);
   }
-
 }
