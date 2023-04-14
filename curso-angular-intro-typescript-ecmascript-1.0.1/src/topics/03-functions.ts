@@ -1,17 +1,40 @@
-function addNumber(a: number, b: number): number {
-    return a + b
+// function addNumber(a: number, b: number): number {
+//     return a + b
+// }
+
+// const addNumberRow = (a: number, b: number): string => {
+//     return `${a + b}`
+// }
+
+// function multiply(base: number, numero?: number, numero2: number = 2) {
+//     return base * numero2
+// }
+
+// const resultado1 = addNumber(1, 2)
+// const resultado2 = addNumberRow(2, 4)
+// const multiplicacion = multiply(4)
+
+// console.log({ resultado1, resultado2, multiplicacion })
+
+interface Character2 {
+    name: string
+    hp: number
+    showHp: () => void
 }
 
-const addNumberRow = (a: number, b: number): string => {
-    return `${a + b}`
+const healCharacter = (character: Character2, hp: number) => {
+    character.hp += hp
 }
 
-function multiply(base: number, numero?: number, numero2: number = 2) {
-    return base * numero2
+const luis: Character2 = {
+    name: 'Luis',
+    hp: 50,
+    showHp() {
+        console.log(`Vida total del personaje: ${this.hp}`)
+    }
 }
 
-const resultado1 = addNumber(1, 2)
-const resultado2 = addNumberRow(2, 4)
-const multiplicacion = multiply(4)
+healCharacter(luis, 10)
+healCharacter(luis, 20)
 
-console.log({ resultado1, resultado2, multiplicacion })
+luis.showHp()
