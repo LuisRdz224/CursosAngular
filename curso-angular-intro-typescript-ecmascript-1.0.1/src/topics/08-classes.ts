@@ -5,6 +5,18 @@ export class Person {
     constructor(public name: string, public address: string) {}
 }
 
-const luis = new Person('Luis', 'SLP')
+export class Hero extends Person {
+    constructor(
+        name: string,
+        public age: number,
+        public power: string,
+        public color: string,
+        address: string
+    ) {
+        super(name, address)
+    }
+}
+
+const luis = new Hero('Luis', 25, 'Volar', 'Black', 'SLP')
 
 console.log(luis)
