@@ -5,7 +5,8 @@
 // import './topics/05-basic-desestructuration'
 // import './topics/06-function-destructuring'
 // import './topics/07-import-export'
-import './topics/08-classes'
+// import './topics/08-classes'
+import './topics/09-generics'
 
 console.log('Hola Mundo desde VSCode')
 
