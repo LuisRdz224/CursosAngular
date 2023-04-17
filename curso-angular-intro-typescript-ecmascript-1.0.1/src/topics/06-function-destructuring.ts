@@ -18,12 +18,13 @@ interface TaxCalculatorOptions {
     products: Product[] //Product contiene phone y tablet
 }
 
-function calculateTaxes(options: TaxCalculatorOptions): number[] {
+function calculateTaxes(options: TaxCalculatorOptions): [number, number] {
+    const { products, tax } = options
     let total = 0
-    options.products.forEach((product) => {
-        total += product.price
+    products.forEach(({ price }) => {
+        total += price
     })
-    return [total, total * options.tax]
+    return [total, total * tax]
 }
 
 const cartShopping = [phone, tablet]
@@ -34,7 +35,9 @@ const result = calculateTaxes({
     tax
 })
 
-console.log('Costo Total: ' + result[0])
-console.log('Costo de impuestos: ' + result[1])
+const [productos, taxes] = result
+
+console.log('Costo Total: ' + productos)
+console.log('Costo de impuestos: ' + taxes)
 
 export {}
