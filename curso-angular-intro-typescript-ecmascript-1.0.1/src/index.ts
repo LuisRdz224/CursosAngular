@@ -4,7 +4,8 @@
 // import './topics/04-homework-types'
 // import './topics/05-basic-desestructuration'
 // import './topics/06-function-destructuring'
-import './topics/07-import-export'
+// import './topics/07-import-export'
+import './topics/08-classes'
 
 console.log('Hola Mundo desde VSCode')
 
