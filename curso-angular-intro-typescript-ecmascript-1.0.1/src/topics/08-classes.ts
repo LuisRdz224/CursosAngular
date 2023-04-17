@@ -2,21 +2,35 @@ export class Person {
     // public name: string
     // public address: string
 
-    constructor(public name: string, public address: string) {}
+    constructor(
+        public firstName: string,
+        public lastName: string,
+        public address: string
+    ) {}
 }
 
-export class Hero extends Person {
+// export class Hero extends Person {
+//     constructor(
+//         name: string,
+//         public age: number,
+//         public power: string,
+//         public color: string,
+//         address: string
+//     ) {
+//         super(name, address)
+//     }
+// }
+export class Hero {
     constructor(
-        name: string,
+        public person: Person,
         public age: number,
         public power: string,
-        public color: string,
-        address: string
-    ) {
-        super(name, address)
-    }
+        public color: string
+    ) {}
 }
 
-const luis = new Hero('Luis', 25, 'Volar', 'Black', 'SLP')
+const luis = new Person('Luis', 'Rodriguez', 'SLP')
 
-console.log(luis)
+const luisHero = new Hero(luis, 25, 'Volar', 'Black')
+
+console.log(luisHero)
