@@ -15,5 +15,6 @@
 
 </dl>
 
-<button (click)="changeName('Eunice')" class="btn btn-primary mx-2">Cambiar nombre</button>
-<button (click)="changeEdad(24)" class="btn btn-primary">Cambiar edad</button>
+<button *ngIf="nombre!=='Eunice'" (click)="changeName('Eunice')" class="btn btn-primary mx-2">Cambiar nombre</button>
+<button *ngIf="edad!== 24" (click)="changeEdad(24)" class="btn btn-primary">Cambiar edad</button>
+<button (click)="reset()" class="btn btn-primary mx-2">Reset</button>
