@@ -5,4 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.css'],
 })
-export class HeroComponent {}
+export class HeroComponent {
+  nombre: string = 'Luis';
+  edad: number = 25;
+}
