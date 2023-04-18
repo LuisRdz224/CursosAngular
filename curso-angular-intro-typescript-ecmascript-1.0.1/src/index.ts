@@ -7,6 +7,7 @@
 // import './topics/07-import-export'
 // import './topics/08-classes'
 import './topics/09-generics'
+import './topics/11-optional-chaining'
 
 console.log('Hola Mundo desde VSCode')
 
