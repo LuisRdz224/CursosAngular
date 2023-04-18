@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ListComponent {
   public names: string[] = ['Luis', 'Eunice', 'bb'];
+  public deletedHero?: string;
+
+  deleteHero(): void {
+    this.deletedHero = this.names.pop();
+  }
 }
