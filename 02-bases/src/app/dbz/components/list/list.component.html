@@ -1,6 +1,6 @@
 <h4>Personajes</h4>
 <ul *ngFor="let character of characterList; let i = index" class="list-group">
-  <li class="list-group-item">
+  <li class="list-group-item" [ngClass]="{'list-group-item-dark': i==2,'list-group-item-primary': i==0}">
     <span class="text-primary">{{i + 1}}</span>
     <span>.- {{character.name}} - </span>
     <strong>{{character.power}}</strong>
