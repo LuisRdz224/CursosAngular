@@ -2,9 +2,9 @@
 <hr>
 <div class="row">
     <div class="col">
-        <dbz-list (onDeletedId)="dbzService.onDeletedId($event)" [characterList]="dbzService.characters"></dbz-list>
+        <dbz-list (onDeletedId)="onDeleteCharacter($event)" [characterList]="characters"></dbz-list>
     </div>
     <div class="col">
-        <dbz-add-characters (onNewCharacter)="dbzService.onNewCharacter($event)"></dbz-add-characters>
+        <dbz-add-characters (onNewCharacter)="onNewCharacter($event)"></dbz-add-characters>
     </div>
 </div>
