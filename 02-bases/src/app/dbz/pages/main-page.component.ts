@@ -20,4 +20,10 @@ export class MainPageComponent {
             name: 'Vegeta',
             power: 7000
         }]
+
+    public onNewCharacter(character: Character): void {
+        console.log('Main Page');
+
+        console.log(character);
+    }
 }

@@ -5,6 +5,6 @@
         <dbz-list [characterList]="characters"></dbz-list>
     </div>
     <div class="col">
-        <dbz-add-characters></dbz-add-characters>
+        <dbz-add-characters (onNewCharacter)="onNewCharacter($event)"></dbz-add-characters>
     </div>
 </div>
