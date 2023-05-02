@@ -22,8 +22,10 @@ export class MainPageComponent {
         }]
 
     public onNewCharacter(character: Character): void {
-        console.log('Main Page');
-
-        console.log(character);
+        this.characters.push(character)
+    }
+    public onDeletedId(index: number): void {
+        console.log(index);
+        this.characters.splice(index, 1)
     }
 }
