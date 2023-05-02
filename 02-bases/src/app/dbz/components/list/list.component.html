@@ -7,6 +7,6 @@
       <span>.- {{character.name}} - </span>
       <strong>{{character.power}}</strong>
     </div>
-    <button class="btn btn-danger" (click)="onDeleteCharacter(i)">X</button>
+    <button class="btn btn-danger" (click)="onDeleteCharacter(character.id?character.id:'')">X</button>
   </li>
 </ul>

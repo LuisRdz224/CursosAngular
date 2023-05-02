@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
+import { v4 as uuid } from 'uuid'
 
 @Component({
   selector: 'dbz-list',
@@ -15,9 +16,9 @@ export class ListComponent {
   }]
 
   @Output()
-  public onDeletedId: EventEmitter<number> = new EventEmitter()
+  public onDeletedId: EventEmitter<string> = new EventEmitter()
 
-  onDeleteCharacter(index: number): void {
+  onDeleteCharacter(index: string): void {
     this.onDeletedId.emit(index)
   }
 
