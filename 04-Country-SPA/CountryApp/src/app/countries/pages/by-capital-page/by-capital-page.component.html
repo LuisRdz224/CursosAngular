@@ -10,11 +10,7 @@
 <hr>
 <div class="row">
     <div class="col">
-        <!-- Searchbox -->
-        <ul>
-            <li *ngFor="let country of countries">
-                {{country.capital}} - {{country.population | number}}
-            </li>
-        </ul>
+        <!-- <hr> -->
+        <countries-table [countries]="countries"></countries-table>
     </div>
 </div>
