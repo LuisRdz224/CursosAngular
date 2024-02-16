@@ -1,1 +1,16 @@
-<p>miamorpreciosa</p>
+<h2>Por Region</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- Searchbox -->
+        <shared-search-box (onValue)="SearchByCountry($event)" placeholder="Buscar por region"></shared-search-box>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col">
+        <!-- <hr> -->
+        <countries-table [countries]="countries"></countries-table>
+    </div>
+</div>
